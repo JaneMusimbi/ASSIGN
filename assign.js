@@ -1,37 +1,37 @@
 class Mkulima{
     constructor(){
     this.farms = [];
-    this.groceryVendors = [];
+    this.order = [];
     this.products = [];
     this.addFarm = (farmId, name, farmer, phone, address) => {
     this.farms.push({farmId,name,farmer,phone,address})}
     this.removeFarm = (farmId) => {
-    var specificItem = this.farms.find(item => item.farmId ===farmId);
-    var farmIndex = this.farms.indexOf(specificItem);
+    var specItem = this.farms.find(item => item.farmId ===farmId);
+    var farmIndex = this.farms.indexOf(specItem);
     this.farms.splice(farmIndex, 1);
     }
     this.updateFarm = function(farmId,newFarmId,newFarmName,newFarmerName,newPhone,newAddress){
-    var specificFarm = this.farms.find(item => item.farmId ===farmId)
-    specificFarm.farmId =newFarmId;
-    specificFarm.farmName =newFarmName;
-    specificFarm.farmer =newFarmerName;
-    specificFarm.phone =newPhone;
-    specificFarm.address =newAddress;
+    var getFarm = this.farms.find(item => item.farmId ===farmId)
+    getFarm.farmId =newFarmId;
+    getFarm.farmName =newFarmName;
+    getFarm.farmer =newFarmerName;
+    getFarm.phone =newPhone;
+    getFarm.address =newAddress;
     }
     this.getFarm = (Id)=>{
     console.log(this.farms.find(object=>object.farmId===Id))}
     this.addProduct = (productId, productName, price) => {
     this.product.push({productId,productName,price})}
     this.removeProduct = (productId) => {
-    var specific = this.product.find(item => item.productId ===productId);
-    var productIndex = this.product.indexOf(specific);
+    var get= this.product.find(item => item.productId ===productId);
+    var productIndex = this.product.indexOf(get);
     this.product.splice(productIndex, 1);
     }
     this.updateProduct = function(productId,newProductId,newProductName,newPrice){
-    var specificProduct = this.product.find(item => item.productId ===productId)
-    specificProduct.productId =newProductId;
-    specificProduct.productName = newProductName;
-    specificProduct.price = newPrice;
+    var getProduct = this.product.find(item => item.productId ===productId)
+    getProduct.productId =newProductId;
+    getProduct.productName = newProductName;
+    getProduct.price = newPrice;
     }
     this.getProduct = (Id)=>{
     console.log(this.product.find(object=>object.productId===Id))}
